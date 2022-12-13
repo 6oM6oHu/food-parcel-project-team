@@ -264,19 +264,25 @@ body {
   }
 }
 
-.offering__wrap-icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.offering__item::before {
+  content: '';
+  display: block;
   margin-bottom: 8px;
 
   width: 48px;
   height: 48px;
   background-color: var(--offering-bg-color);
+  background-repeat: no-repeat;
+  background-position: center;
   border-radius: 50%;
 }
-.offering__icon {
-  fill: var(--offering-icons-color);
+
+.offering__item:first-child::before {
+  background-image: url(../images/rocket.svg);
+}
+
+.offering__item:last-child::before {
+  background-image: url(../images/touch.svg);
 }
 
 .offering__label {
