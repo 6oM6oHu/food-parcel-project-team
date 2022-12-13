@@ -4,6 +4,8 @@
   --offering-icons-color: #7eb101;
   --offering-ellipse: rgba(255, 255, 255, 0.5);
   --offering-link: #000000;
+  --offering-gradient-start: rgba(47, 88, 63, 1);
+  --offering-gradient-end: rgba(105, 105, 105, 0);
 }
 
 h1,
@@ -47,7 +49,6 @@ body {
 
 .container {
   margin: 0 auto;
-  padding: 70px 20px 60px;
 
   @media screen and (min-width: 320px) {
     width: 320px;
@@ -66,12 +67,16 @@ body {
   display: flex;
   flex-direction: column;
   gap: 28px;
+  padding: 70px 20px 60px;
 
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url(../images/background-mobile.png);
 
   @media screen and (min-width: 768px) {
+    gap: 40px;
+    padding: 187px 32px 100px;
+
     background-image: url(../images//background-tablet.png);
   }
 
@@ -83,10 +88,22 @@ body {
 .offering__title {
   font-size: 28px;
   line-height: 1.18;
+
+  @media screen and (min-width: 768px) {
+    width: 526px;
+    font-size: 42px;
+    line-height: 1.17;
+  }
 }
-.offering__text {
+
+.offering__description {
   font-size: 14px;
   line-height: 1.14;
+  @media screen and (min-width: 768px) {
+    width: 526px;
+    font-size: 16px;
+    line-height: 1.19;
+  }
 }
 
 .offering__wrap-ellipse {
@@ -98,26 +115,106 @@ body {
   height: 280px;
   border: 3px solid var(--offering-ellipse);
   border-radius: 50%;
+
+  @media screen and (min-width: 768px) {
+    width: 357px;
+    height: 357px;
+  }
 }
+
 .offering__wrap-img {
   position: relative;
   width: 256px;
   height: 256px;
   background-color: var(--offering-bg-color);
   border-radius: 50%;
+
+  @media screen and (min-width: 768px) {
+    width: 326px;
+    height: 326px;
+  }
 }
+.offering__wrap-img::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 26px;
+  left: 67px;
+
+  width: 128px;
+  height: 44px;
+  background-image: radial-gradient(
+    50% 50% at 50% 50%,
+    var(--offering-gradient-start) 0%,
+    var(--offering-gradient-end) 100%
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @media screen and (min-width: 768px) {
+    bottom: 33px;
+    left: 85px;
+
+    width: 164px;
+    height: 56px;
+  }
+}
+
 .offering__lift-img {
   position: absolute;
-  top: -40px;
+  bottom: 41px;
   left: 30px;
+  width: 202px;
+  height: 256px;
+  z-index: 2;
+
+  @media screen and (min-width: 768px) {
+    bottom: 53px;
+    left: 38px;
+    width: 257px;
+    height: 326px;
+    display: flex;
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 0px;
+      left: 332px;
+
+      width: 166px;
+      height: 211px;
+      background-image: url('../images/aple-tablet.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      opacity: 60%;
+    }
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 0px;
+      left: 542px;
+
+      width: 108px;
+      height: 136px;
+      background-image: url('../images/aple-tablet.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      opacity: 30%;
+    }
+  }
 }
+
 .offering__list {
   display: flex;
   flex-direction: column;
   gap: 28px;
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    gap: 116px;
+  }
 }
-// .offering__item {
-// }
 
 .offering__wrap-icon {
   display: flex;
@@ -138,6 +235,11 @@ body {
   margin-bottom: 16px;
   font-size: 18px;
   line-height: 1.17;
+}
+
+.offering__text {
+  font-size: 14px;
+  line-height: 1.14;
 }
 
 .offering__wrap-button {
