@@ -1,4 +1,4 @@
-@import '~node_modules/modern-normalize/modern-normalize.css'; /* !------------------CONTAINER------------------ */
+@import '~node_modules/modern-normalize/modern-normalize.css';
 .container {
   width: 100%;
   margin-left: auto;
