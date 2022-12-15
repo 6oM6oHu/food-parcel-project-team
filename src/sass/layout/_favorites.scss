@@ -48,6 +48,8 @@
   border: 11px solid #ffe550;
   border-radius: 139.658px;
 
+  cursor: pointer;
+
   &:nth-child(-n + 3) {
     display: block;
   }
@@ -67,6 +69,11 @@
 
     border-radius: 197px;
     border: 16px solid #ffe550;
+  }
+
+  &:hover,
+  &:focus {
+    border-color: #bbf330;
   }
 }
 

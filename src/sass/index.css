@@ -137,6 +137,7 @@ body {
   padding: 18.12px 17.35px;
   border: 11px solid #ffe550;
   border-radius: 139.658px;
+  cursor: pointer;
 }
 .favorites-list__item:nth-child(-n+3) {
   display: block;
@@ -159,6 +160,9 @@ body {
     border-radius: 197px;
     border: 16px solid #ffe550;
   }
+}
+.favorites-list__item:hover, .favorites-list__item:focus {
+  border-color: #bbf330;
 }
 
 .favorites-lis__link {
