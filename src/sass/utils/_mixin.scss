@@ -11,7 +11,7 @@
 }
 
 @mixin desktop {
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1280px) {
     @content;
   }
 }
@@ -22,4 +22,9 @@
     (min-resolution: 2dppx) {
     @content;
   }
+}
+
+@mixin sectionPadding($pt: 60px, $pb: 60px) {
+  padding-top: $pt;
+  padding-bottom: $pt;
 }
