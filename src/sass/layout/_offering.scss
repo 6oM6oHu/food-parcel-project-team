@@ -1,66 +1,8 @@
 :root {
-  --offering-text-color: #2c2c2c;
-  --offering-bg-color: #ffffff;
-  --offering-icons-color: #7eb101;
   --offering-ellipse: rgba(255, 255, 255, 0.5);
   --offering-link: #000000;
   --offering-gradient-start: rgba(47, 88, 63, 1);
   --offering-gradient-end: rgba(105, 105, 105, 0);
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-button {
-  cursor: pointer;
-  display: block;
-  padding: 0;
-}
-
-body {
-  font-family: 'Roboto', sans-serif;
-  color: var(--offering-text-color);
-}
-
-.container {
-  margin: 0 auto;
-
-  @media screen and (min-width: 320px) {
-    width: 320px;
-  }
-
-  @media screen and (min-width: 768px) {
-    width: 768px;
-  }
-
-  @media screen and (min-width: 1280px) {
-    width: 1280px;
-  }
 }
 
 .offering {
@@ -69,14 +11,14 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 
-  @media screen and (min-width: 768px) {
+  @include tablet {
     gap: 40px;
     padding: 187px 116px 100px 32px;
 
     background-image: url(../images//background-tablet.png);
   }
 
-  @media screen and (min-width: 1280px) {
+  @include desktop {
     display: flex;
     gap: 90px;
     padding: 231px 51px 43px 16px;
@@ -89,7 +31,7 @@ body {
   line-height: 1.18;
   margin-bottom: 28px;
 
-  @media screen and (min-width: 768px) {
+  @include tablet {
     width: 526px;
     font-size: 42px;
     line-height: 1.17;
@@ -102,13 +44,13 @@ body {
   line-height: 1.14;
   margin-bottom: 28px;
 
-  @media screen and (min-width: 768px) {
+  @include tablet {
     width: 500px;
     font-size: 16px;
     line-height: 1.1875;
     margin-bottom: 40px;
   }
-  @media screen and (min-width: 1280px) {
+  @include desktop {
     width: 560px;
     line-height: 1.5;
   }
@@ -125,12 +67,12 @@ body {
   border: 3px solid var(--offering-ellipse);
   border-radius: 50%;
 
-  @media screen and (min-width: 768px) {
+  @include tablet {
     width: 357px;
     height: 357px;
   }
 
-  @media screen and (min-width: 1280px) {
+  @include desktop {
     flex-shrink: 0;
     width: 550px;
     height: 550px;
@@ -142,49 +84,49 @@ body {
   position: relative;
   width: 256px;
   height: 256px;
-  background-color: var(--offering-bg-color);
+  background-color: var(--primary-bg-color);
   border-radius: 50%;
 
-  @media screen and (min-width: 768px) {
+  @include tablet {
     width: 326px;
     height: 326px;
   }
-  @media screen and (min-width: 1280px) {
+  @include desktop {
     width: 502px;
     height: 502px;
   }
-}
-.offering__wrap-img::after {
-  content: '';
-  display: block;
-  position: absolute;
-  bottom: 26px;
-  left: 67px;
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 26px;
+    left: 67px;
 
-  width: 128px;
-  height: 44px;
-  background-image: radial-gradient(
-    50% 50% at 50% 50%,
-    var(--offering-gradient-start) 0%,
-    var(--offering-gradient-end) 100%
-  );
-  background-size: contain;
-  background-repeat: no-repeat;
+    width: 128px;
+    height: 44px;
+    background-image: radial-gradient(
+      50% 50% at 50% 50%,
+      var(--offering-gradient-start) 0%,
+      var(--offering-gradient-end) 100%
+    );
+    background-size: contain;
+    background-repeat: no-repeat;
 
-  @media screen and (min-width: 768px) {
-    bottom: 33px;
-    left: 85px;
+    @include tablet {
+      bottom: 33px;
+      left: 85px;
 
-    width: 164px;
-    height: 56px;
-  }
+      width: 164px;
+      height: 56px;
+    }
 
-  @media screen and (min-width: 1280px) {
-    bottom: 51px;
-    left: 131px;
+    @include desktop {
+      bottom: 51px;
+      left: 131px;
 
-    width: 252px;
-    height: 87px;
+      width: 252px;
+      height: 87px;
+    }
   }
 }
 
@@ -196,7 +138,7 @@ body {
   height: 256px;
   z-index: 2;
 
-  @media screen and (min-width: 768px) {
+  @include tablet {
     display: flex;
     bottom: 53px;
     left: 38px;
@@ -212,10 +154,14 @@ body {
 
       width: 166px;
       height: 211px;
-      background-image: url('../images/aple-tablet.png');
+
       background-size: cover;
       background-repeat: no-repeat;
       opacity: 60%;
+      background-image: url(../images/aple-tablet-1x.png);
+      @include retina {
+        background-image: url(../images/aple-tablet-2x.png);
+      }
     }
     &::after {
       content: '';
@@ -226,14 +172,18 @@ body {
 
       width: 108px;
       height: 136px;
-      background-image: url('../images/aple-tablet.png');
+
       background-size: cover;
       background-repeat: no-repeat;
       opacity: 30%;
+      background-image: url(../images/aple-tablet-1x.png);
+      @include retina {
+        background-image: url(../images/aple-tablet-2x.png);
+      }
     }
   }
 
-  @media screen and (min-width: 1280px) {
+  @include desktop {
     bottom: 78px;
     left: 60px;
     width: 396px;
@@ -253,36 +203,38 @@ body {
   flex-direction: column;
   gap: 28px;
   margin-bottom: 28px;
-  @media screen and (min-width: 768px) {
+  @include tablet {
     flex-direction: row;
     gap: 116px;
     margin-bottom: 40px;
   }
-  @media screen and (min-width: 768px) {
+  @include tablet {
     gap: 67px;
     margin-bottom: 32px;
   }
 }
 
-.offering__item::before {
-  content: '';
-  display: block;
-  margin-bottom: 8px;
+.offering__item {
+  &::before {
+    content: '';
+    display: block;
+    margin-bottom: 8px;
 
-  width: 48px;
-  height: 48px;
-  background-color: var(--offering-bg-color);
-  background-repeat: no-repeat;
-  background-position: center;
-  border-radius: 50%;
-}
+    width: 48px;
+    height: 48px;
+    background-color: var(--primary-bg-color);
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+  }
 
-.offering__item:first-child::before {
-  background-image: url(../images/rocket.svg);
-}
+  &:first-child::before {
+    background-image: url(../images/rocket.svg);
+  }
 
-.offering__item:last-child::before {
-  background-image: url(../images/touch.svg);
+  &:last-child::before {
+    background-image: url(../images/touch.svg);
+  }
 }
 
 .offering__label {
@@ -295,10 +247,10 @@ body {
   font-size: 14px;
   line-height: 1.14;
 
-  @media screen and (min-width: 768px) {
+  @include tablet {
     line-height: 1.14;
   }
-  @media screen and (min-width: 1280px) {
+  @include desktop {
     line-height: 1.5;
   }
 }
@@ -318,9 +270,9 @@ body {
   font-size: 13px;
   line-height: 1.54;
 
-  color: var(--offering-text-color);
-  background-color: var(--offering-bg-color);
-  border: 2px solid var(--offering-icons-color);
+  color: var(--primary-text-color);
+  background-color: var(--primary-bg-color);
+  border: 2px solid var(--scd--accent);
   border-radius: 30px;
 }
 
@@ -342,7 +294,7 @@ body {
     background-image: url(../images/chevron-down.svg);
     fill: currentColor;
   }
-  @media screen and (min-width: 1280px) {
+  @include desktop {
     display: none;
   }
 }

@@ -3,17 +3,35 @@
     <div class="offering__wrap-ellipse">
       <div class="offering__wrap-img">
         <div class="offering__lift-img">
-          <img
-            srcset="
-              ./images/aple-mobile.png  202w,
-              ./images/aple-tablet.png  258w,
-              ./images/aple-desktop.png 396w
-            "
-            sizes="(min-width: 1280px) 396px, (min-width: 768px) 258px, (min-width: 320px) 202px"
-            src="./images/aple-desktop.png"
-            alt="Big green apple"
-            class="offering__img"
-          />
+          <picture>
+            <source
+              srcset="
+                ./images/aple-desktop-1x.png 1x,
+                ./images/aple-desktop-2x.png 2x
+              "
+              media="(min-width: 1280px)"
+            />
+            <source
+              srcset="
+                ./images/aple-tablet-1x.png 1x,
+                ./images/aple-tablet-2x.png 2x
+              "
+              media="(min-width: 768px)"
+            />
+            <source
+              srcset="
+                ./images/aple-mobile-1x.png 1x,
+                ./images/aple-mobile-2x.png 2x
+              "
+              media="(min-width: 320px)"
+            />
+            <img
+              class="offering__img"
+              src="./images/aple-mobile-1x.png"
+              alt="Big green apple"
+              width="396"
+            />
+          </picture>
         </div>
       </div>
     </div>
