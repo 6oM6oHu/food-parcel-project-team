@@ -1,8 +1,11 @@
-@import './common';
+@import './utils/mixin';
+@import './base/common';
+@import './base/reset';
+@import './components/container';
 @import './layout/header';
 @import './layout/hero';
 @import './layout/offering';
-@import './layout/favorite';
-// @import './layout/customers-say';
+@import './layout/favorites';
+@import './layout/customers-say';
 @import './layout/subscribe';
 @import './layout/footer';
