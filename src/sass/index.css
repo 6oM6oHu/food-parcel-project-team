@@ -80,6 +80,7 @@ body {
   }
 }
 
+
 :root {
   --offering-ellipse: rgba(255, 255, 255, 0.5);
   --offering-link: #000000;
@@ -386,6 +387,7 @@ body {
     display: none;
   }
 }
+
 
 .favorites {
   text-align: center;
