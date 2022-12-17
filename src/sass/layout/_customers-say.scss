@@ -1,61 +1,107 @@
-/* -----Reviews----- */
-
 .section {
-  padding-left: 16px;
 }
 .reviews {
-  height: 647px;
-  width: 1280px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  height: 769px;
+  max-width: 1280px;
 
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 
   background-image: url(../images/scnd-bg.png);
   background-size: contain;
   background-repeat: no-repeat;
+
+  @include tablet {
+    padding-bottom: 120px;
+  }
+
+  @include desktop {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 16px;
+  }
 }
+
 .reviews__title {
-  padding-top: 100px;
+  margin-bottom: 20px;
 
-  font-family: Roboto;
-  font-size: 42px;
+  font-size: 28px;
   font-weight: 700;
-  line-height: 49px;
+  line-height: calc(33 / 28);
   letter-spacing: 0em;
-  text-align: left;
+
+  @include tablet {
+    line-height: calc(49 / 42);
+  }
+
+  @include desktop {
+    // padding-top: 100px;
+    font-size: 42px;
+  }
 }
+
 .reviews__subtext {
-  margin-top: 20px;
+  margin-bottom: 32px;
 
-  font-family: Roboto;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
-  line-height: 19px;
+  line-height: calc(16 / 14);
   letter-spacing: 0em;
-  text-align: left;
+
+  @include desktop {
+    font-size: 16px;
+    line-height: calc(19 / 16);
+  }
 }
+
 .reviews-cards {
-  display: flex;
+  @include tablet {
+    display: flex;
+    gap: 32px;
+  }
 
-  margin-top: 32px;
+  @include desktop {
+    gap: 139px;
+  }
+}
 
-  gap: 139px;
-}
-.list {
-}
 .reviews-cards__item {
-  padding-left: 14px;
+  outline: solid 1px black;
+  padding-left: 8px;
 
-  height: 227px;
-  width: 501px;
+  height: 247px;
+  width: 280px;
   background-color: var(--primary-bg-color);
-
   border-radius: 25px;
   border-top-left-radius: 0;
+
+  &:first-child {
+    margin-bottom: 24px;
+
+    @include desktop {
+      margin: 0;
+    }
+  }
+
+  @include tablet {
+    height: 244px;
+    width: 336px;
+  }
+
+  @include desktop {
+    padding-left: 14px;
+
+    height: 227px;
+    width: 501px;
+  }
 }
+
 .grade {
   display: flex;
-
-  padding-top: 14px;
+  padding-top: 8px;
+  margin-bottom: 28px;
 
   gap: 4px;
 }
@@ -66,15 +112,16 @@
 .grade__icon {
 }
 .reviews-cards__text {
-  padding-top: 28px;
-
-  font-family: Roboto;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
-  line-height: 21px;
-  letter-spacing: 0em;
-  text-align: left;
+  line-height: calc(19 / 16);
+
+  @include desktop {
+    font-size: 18px;
+    line-height: calc(21 / 18);
+  }
 }
+
 .customer {
   display: inline-flex;
   position: relative;
@@ -91,6 +138,7 @@
 
   background-color: var(--scd--accent);
 }
+
 .customer__photo {
 }
 .customer__container {
@@ -100,20 +148,16 @@
   margin-left: 16px;
 }
 .customer__name {
-  font-family: Roboto;
   font-size: 14px;
   font-weight: 500;
-  line-height: 21px;
+  line-height: calc(21 / 14);
   letter-spacing: 0em;
-  text-align: left;
 }
 .customer__subtext {
   margin-top: 2px;
 
-  font-family: Roboto;
   font-size: 14px;
   font-weight: 400;
-  line-height: 21px;
+  line-height: calc(21 / 14);
   letter-spacing: 0em;
-  text-align: left;
 }
