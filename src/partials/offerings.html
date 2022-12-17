@@ -1,44 +1,30 @@
-<section class="section">
-  <div class="container offering">
-    <div class="offering__wrap-ellipse">
-      <div class="offering__wrap-img">
-        <div class="offering__lift-img">
-          <picture>
-            <source
-              srcset="
-                ./images/aple-desktop-1x.png 1x,
-                ./images/aple-desktop-2x.png 2x
-              "
-              media="(min-width: 1280px)"
-            />
-            <source
-              srcset="
-                ./images/aple-tablet-1x.png 1x,
-                ./images/aple-tablet-2x.png 2x
-              "
-              media="(min-width: 768px)"
-            />
-            <source
-              srcset="
-                ./images/aple-mobile-1x.png 1x,
-                ./images/aple-mobile-2x.png 2x
-              "
-              media="(min-width: 320px)"
-            />
-            <img
-              class="offering__img"
-              src="./images/aple-mobile-1x.png"
-              alt="Big green apple"
-              width="396"
-            />
-          </picture>
-        </div>
-      </div>
-    </div>
+<section class="section offering">
+  <div class="container offering__container">
+    <picture class="offering__images">
+      <source
+        srcset="
+          ./images/aple-desktop-1x.png 1x,
+          ./images/aple-desktop-2x.png 2x
+        "
+        media="(min-width: 1280px)"
+      />
+      <source
+        srcset="./images/aple-tablet-1x.png 1x, ./images/aple-tablet-2x.png 2x"
+        media="(min-width: 768px)"
+      />
+      <source
+        srcset="./images/aple-mobile-1x.png 1x, ./images/aple-mobile-2x.png 2x"
+        media="(min-width: 320px)"
+      />
+      <img
+        class="offering__img"
+        src="./images/aple-tablet-1x.png"
+        alt="Big green apple"
+      />
+    </picture>
+
     <div class="offering__wrap-about">
-      <h2 class="section-title offering__title">
-        What’s Special About Our Offerings
-      </h2>
+      <h2 class="offering__title">What’s Special About Our Offerings</h2>
       <p class="offering__description">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
         varius enim in eros elementum tristique. Duis cursus, mi quis viverra
