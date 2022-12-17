@@ -27,14 +27,10 @@
 }
 
 .offering__title {
-  font-size: 28px;
-  line-height: 1.18;
   margin-bottom: 28px;
 
   @include tablet {
     width: 526px;
-    font-size: 42px;
-    line-height: 1.17;
     margin-bottom: 20px;
   }
 }
@@ -60,6 +56,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 60px;
 
   width: 280px;
@@ -70,6 +68,8 @@
   @include tablet {
     width: 357px;
     height: 357px;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   @include desktop {

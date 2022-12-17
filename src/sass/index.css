@@ -48,7 +48,7 @@ button {
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 14px;
   color: var(--primary-text-color);
 }
@@ -110,15 +110,11 @@ body {
 }
 
 .offering__title {
-  font-size: 28px;
-  line-height: 1.18;
   margin-bottom: 28px;
 }
 @media screen and (min-width: 768px) {
   .offering__title {
     width: 526px;
-    font-size: 42px;
-    line-height: 1.17;
     margin-bottom: 20px;
   }
 }
@@ -147,6 +143,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 60px;
   width: 280px;
   height: 280px;
@@ -157,6 +155,8 @@ body {
   .offering__wrap-ellipse {
     width: 357px;
     height: 357px;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -188,18 +188,14 @@ body {
   }
 }
 .offering__wrap-img::after {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   bottom: 26px;
   left: 67px;
   width: 128px;
   height: 44px;
-  background-image: radial-gradient(
-    50% 50% at 50% 50%,
-    var(--offering-gradient-start) 0%,
-    var(--offering-gradient-end) 100%
-  );
+  background-image: radial-gradient(50% 50% at 50% 50%, var(--offering-gradient-start) 0%, var(--offering-gradient-end) 100%);
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -237,7 +233,7 @@ body {
     height: 326px;
   }
   .offering__lift-img::before {
-    content: '';
+    content: "";
     display: block;
     position: absolute;
     bottom: 0px;
@@ -250,17 +246,14 @@ body {
     background-image: url(../images/aple-tablet-1x.png);
   }
 }
-@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2),
-  screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2),
-  screen and (min-width: 768px) and (min-resolution: 192dpi),
-  screen and (min-width: 768px) and (min-resolution: 2dppx) {
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .offering__lift-img::before {
     background-image: url(../images/aple-tablet-2x.png);
   }
 }
 @media screen and (min-width: 768px) {
   .offering__lift-img::after {
-    content: '';
+    content: "";
     display: block;
     position: absolute;
     bottom: 0px;
@@ -273,10 +266,7 @@ body {
     background-image: url(../images/aple-tablet-1x.png);
   }
 }
-@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2),
-  screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2),
-  screen and (min-width: 768px) and (min-resolution: 192dpi),
-  screen and (min-width: 768px) and (min-resolution: 2dppx) {
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .offering__lift-img::after {
     background-image: url(../images/aple-tablet-2x.png);
   }
@@ -317,7 +307,7 @@ body {
 }
 
 .offering__item::before {
-  content: '';
+  content: "";
   display: block;
   margin-bottom: 8px;
   width: 48px;
@@ -384,7 +374,7 @@ body {
   color: var(--offering-link);
 }
 .offering__link::after {
-  content: '';
+  content: "";
   display: block;
   width: 14px;
   height: 14px;
@@ -456,7 +446,7 @@ body {
   border-radius: 139.658px;
   cursor: pointer;
 }
-.favorites-list__item:nth-child(-n + 3) {
+.favorites-list__item:nth-child(-n+3) {
   display: block;
 }
 @media screen and (min-width: 768px) {
@@ -478,8 +468,7 @@ body {
     border: 16px solid #ffe550;
   }
 }
-.favorites-list__item:hover,
-.favorites-list__item:focus {
+.favorites-list__item:hover, .favorites-list__item:focus {
   border-color: #bbf330;
 }
 
@@ -567,7 +556,7 @@ body {
 
 .customer::after {
   position: absolute;
-  content: '';
+  content: "";
   right: -14px;
   height: 100%;
   width: 1px;
@@ -598,4 +587,4 @@ body {
   line-height: 21px;
   letter-spacing: 0em;
   text-align: left;
-} /*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=index.css.map */
