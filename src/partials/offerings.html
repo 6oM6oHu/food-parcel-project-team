@@ -1,35 +1,67 @@
-<section class="section offering">
-  <div class="container">
-    <img src="../images/aple.jpg" alt="Big green apple" class="offering-img" />
-    <h2 class="offering-title">What’s Special About Our Offerings</h2>
-    <p class="offering-text">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-      varius enim in eros elementum tristique. Duis cursus, mi quis viverra
-      ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
-    </p>
-    <ul class="offering-list">
-      <li class="offering-item">
-        <svg class="offering-icon">
-          <use></use>
-        </svg>
-        <h3 class="offering-label">Fastest Delivery</h3>
-        <p class="offering-text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-          varius enim in eros.
-        </p>
-      </li>
-      <li class="offering-item">
-        <svg class="offering-icon">
-          <use></use>
-        </svg>
-        <h3 class="offering-label">Easy To Order</h3>
-        <p class="offering-text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-          varius enim in eros.
-        </p>
-      </li>
-    </ul>
-    <button type="button" class="button offering-button">Order Now</button>
-    <a href="#" class="offering-link">Read More &#62;</a>
+<section class="section">
+  <div class="container offering">
+    <div class="offering__wrap-ellipse">
+      <div class="offering__wrap-img">
+        <div class="offering__lift-img">
+          <picture>
+            <source
+              srcset="
+                ./images/aple-desktop-1x.png 1x,
+                ./images/aple-desktop-2x.png 2x
+              "
+              media="(min-width: 1280px)"
+            />
+            <source
+              srcset="
+                ./images/aple-tablet-1x.png 1x,
+                ./images/aple-tablet-2x.png 2x
+              "
+              media="(min-width: 768px)"
+            />
+            <source
+              srcset="
+                ./images/aple-mobile-1x.png 1x,
+                ./images/aple-mobile-2x.png 2x
+              "
+              media="(min-width: 320px)"
+            />
+            <img
+              class="offering__img"
+              src="./images/aple-mobile-1x.png"
+              alt="Big green apple"
+              width="396"
+            />
+          </picture>
+        </div>
+      </div>
+    </div>
+    <div class="offering__wrap-about">
+      <h2 class="offering__title">What’s Special About Our Offerings</h2>
+      <p class="offering__description">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+        varius enim in eros elementum tristique. Duis cursus, mi quis viverra
+        ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
+      </p>
+      <ul class="offering__list">
+        <li class="offering__item">
+          <h3 class="offering__label">Fastest Delivery</h3>
+          <p class="offering__text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            varius enim in eros.
+          </p>
+        </li>
+        <li class="offering__item">
+          <h3 class="offering__label">Easy To Order</h3>
+          <p class="offering__text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            varius enim in eros.
+          </p>
+        </li>
+      </ul>
+      <div class="offering__wrap-button">
+        <button type="button" class="button offering__button">Order Now</button>
+        <a href="#" class="offering__link">Read More</a>
+      </div>
+    </div>
   </div>
 </section>
