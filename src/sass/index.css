@@ -80,6 +80,315 @@ body {
   }
 }
 
+
+:root {
+  --offering-ellipse: rgba(255, 255, 255, 0.5);
+  --offering-link: #000000;
+  --offering-gradient-start: rgba(47, 88, 63, 1);
+  --offering-gradient-end: rgba(105, 105, 105, 0);
+}
+
+.offering {
+  padding: 70px 20px 60px;
+  background-image: url(../images/background-mobile.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media screen and (min-width: 768px) {
+  .offering {
+    gap: 40px;
+    padding: 187px 116px 100px 32px;
+    background-image: url(../images//background-tablet.png);
+  }
+}
+@media screen and (min-width: 1280px) {
+  .offering {
+    display: flex;
+    gap: 90px;
+    padding: 231px 51px 43px 16px;
+    background-image: url(../images/background.png);
+  }
+}
+
+.offering__title {
+  font-size: 28px;
+  line-height: 1.18;
+  margin-bottom: 28px;
+}
+@media screen and (min-width: 768px) {
+  .offering__title {
+    width: 526px;
+    font-size: 42px;
+    line-height: 1.17;
+    margin-bottom: 20px;
+  }
+}
+
+.offering__description {
+  font-size: 14px;
+  line-height: 1.14;
+  margin-bottom: 28px;
+}
+@media screen and (min-width: 768px) {
+  .offering__description {
+    width: 500px;
+    font-size: 16px;
+    line-height: 1.1875;
+    margin-bottom: 40px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .offering__description {
+    width: 560px;
+    line-height: 1.5;
+  }
+}
+
+.offering__wrap-ellipse {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 60px;
+  width: 280px;
+  height: 280px;
+  border: 3px solid var(--offering-ellipse);
+  border-radius: 50%;
+}
+@media screen and (min-width: 768px) {
+  .offering__wrap-ellipse {
+    width: 357px;
+    height: 357px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .offering__wrap-ellipse {
+    flex-shrink: 0;
+    width: 550px;
+    height: 550px;
+    margin-bottom: 0px;
+  }
+}
+
+.offering__wrap-img {
+  position: relative;
+  width: 256px;
+  height: 256px;
+  background-color: var(--primary-bg-color);
+  border-radius: 50%;
+}
+@media screen and (min-width: 768px) {
+  .offering__wrap-img {
+    width: 326px;
+    height: 326px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .offering__wrap-img {
+    width: 502px;
+    height: 502px;
+  }
+}
+.offering__wrap-img::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 26px;
+  left: 67px;
+  width: 128px;
+  height: 44px;
+  background-image: radial-gradient(50% 50% at 50% 50%, var(--offering-gradient-start) 0%, var(--offering-gradient-end) 100%);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+@media screen and (min-width: 768px) {
+  .offering__wrap-img::after {
+    bottom: 33px;
+    left: 85px;
+    width: 164px;
+    height: 56px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .offering__wrap-img::after {
+    bottom: 51px;
+    left: 131px;
+    width: 252px;
+    height: 87px;
+  }
+}
+
+.offering__lift-img {
+  position: absolute;
+  bottom: 41px;
+  left: 30px;
+  width: 202px;
+  height: 256px;
+  z-index: 2;
+}
+@media screen and (min-width: 768px) {
+  .offering__lift-img {
+    display: flex;
+    bottom: 53px;
+    left: 38px;
+    width: 257px;
+    height: 326px;
+  }
+  .offering__lift-img::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    left: 332px;
+    width: 166px;
+    height: 211px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 60%;
+    background-image: url(../images/aple-tablet-1x.png);
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .offering__lift-img::before {
+    background-image: url(../images/aple-tablet-2x.png);
+  }
+}
+@media screen and (min-width: 768px) {
+  .offering__lift-img::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    left: 542px;
+    width: 108px;
+    height: 136px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 30%;
+    background-image: url(../images/aple-tablet-1x.png);
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .offering__lift-img::after {
+    background-image: url(../images/aple-tablet-2x.png);
+  }
+}
+@media screen and (min-width: 1280px) {
+  .offering__lift-img {
+    bottom: 78px;
+    left: 60px;
+    width: 396px;
+    height: 502px;
+  }
+  .offering__lift-img::before {
+    display: none;
+  }
+  .offering__lift-img::after {
+    display: none;
+  }
+}
+
+.offering__list {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  margin-bottom: 28px;
+}
+@media screen and (min-width: 768px) {
+  .offering__list {
+    flex-direction: row;
+    gap: 116px;
+    margin-bottom: 40px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .offering__list {
+    gap: 67px;
+    margin-bottom: 32px;
+  }
+}
+
+.offering__item::before {
+  content: "";
+  display: block;
+  margin-bottom: 8px;
+  width: 48px;
+  height: 48px;
+  background-color: var(--primary-bg-color);
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+}
+.offering__item:first-child::before {
+  background-image: url(../images/rocket.svg);
+}
+.offering__item:last-child::before {
+  background-image: url(../images/touch.svg);
+}
+
+.offering__label {
+  margin-bottom: 16px;
+  font-size: 18px;
+  line-height: 1.17;
+}
+
+.offering__text {
+  font-size: 14px;
+  line-height: 1.14;
+}
+@media screen and (min-width: 768px) {
+  .offering__text {
+    line-height: 1.14;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .offering__text {
+    line-height: 1.5;
+  }
+}
+
+.offering__wrap-button {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.offering__button {
+  width: 106px;
+  height: 40px;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.54;
+  color: var(--primary-text-color);
+  background-color: var(--primary-bg-color);
+  border: 2px solid var(--scd--accent);
+  border-radius: 30px;
+}
+
+.offering__link {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1.43;
+  color: var(--offering-link);
+}
+.offering__link::after {
+  content: "";
+  display: block;
+  width: 14px;
+  height: 14px;
+  background-image: url(../images/chevron-down.svg);
+  fill: currentColor;
+}
+@media screen and (min-width: 1280px) {
+  .offering__link {
+    display: none;
+  }
+}
+
+
 .favorites {
   text-align: center;
   padding-top: 60px;
