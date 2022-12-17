@@ -1,0 +1,41 @@
+:root {
+  --primary-text-color: #2c2c2c;
+  --primary-bg-color: #fefefe;
+  --accent: #bbf330;
+  --scd--accent: #7eb101;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  cursor: pointer;
+  display: block;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+
+  color: var(--primary-text-color);
+}
