@@ -274,6 +274,12 @@
   background-color: var(--primary-bg-color);
   border: 2px solid var(--scd--accent);
   border-radius: 30px;
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent);
+    border-color: var(--accent);
+  }
 }
 
 .offering__link {
@@ -284,6 +290,7 @@
   font-family: inherit;
   font-size: 14px;
   line-height: 1.43;
+  text-decoration: none;
   color: var(--offering-link);
 
   &::after {
@@ -291,8 +298,16 @@
     display: block;
     width: 14px;
     height: 14px;
+    // border-radius: 8px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
+
     background-image: url(../images/chevron-down.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
     fill: currentColor;
+  }
+  &:hover::after {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
   }
   @include desktop {
     display: none;
