@@ -6,7 +6,7 @@
     </svg>
   </a>
   <nav class="header__nav">
-    <ul class="header__list">
+    <ul class="header__list is-hidden" mobilMenu>
       <li class="header__item"><a href="" class="header__link">Home</a></li>
       <li class="header__item"><a href="" class="header__link">About</a></li>
       <li class="header__item"><a href="" class="header__link">Service</a></li>
@@ -15,9 +15,19 @@
     </ul>
     <button type="button" class="header__order-button">Order Now</button>
   </nav>
-  <button type="button" class="header__menu-button">
+  <button type="button" class="header__menu-button" mobilMenu-open>
     <svg width="28" height="28">
       <use href="./images/iconHeader.svg#gg_menu"></use>
+    </svg>
+  </button>
+  <button
+    type="button"
+    class="header__cross-button is-hidden"
+    mobilMenu-close
+    mobilMenu-button
+  >
+    <svg width="24" height="24">
+      <use href="./images/iconHeader.svg#menuCross"></use>
     </svg>
   </button>
 </header>
