@@ -1,0 +1,114 @@
+.modal-window-backdrop {
+    background-color: rgba(94, 99, 99, 0.7);
+}
+
+.modal-window {
+    position: relative;
+    max-width: 320px;
+    width: 100%;
+    max-height: 449px;
+    background-color: #FFE550;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    border-radius: 30px;
+}
+
+.modal-window__close-button {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    background: #FFFFFF;
+    border: none;
+    border-radius: 50%;
+}
+
+.modal-window__close-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.modal-window__title {
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 24px;
+    line-height: calc(29 / 24);
+    text-align: center;
+    color: #2c2c2c;
+}
+
+.modal-window__form {}
+
+.modal-window__item {
+    display: flex;
+    flex-direction: column;
+    &:not(:last-child) {
+        margin-bottom: 24px;
+    }
+}
+
+.modal-window__label {
+    margin-left: 12px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: calc(22 / 16);
+    color: #2C2C2C;
+}
+
+
+.modal-window__input {
+    height: 48px;
+    padding-left: 12px;
+    padding-right: 12px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: calc(20 / 16);
+    color: #2C2C2C;
+    border: 1px solid rgba(18, 18, 18, 0.12);
+    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 30px;
+
+    &::placeholder {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: calc(20 / 16);
+        color: #C4C4C4;
+    }
+
+    &:focus {
+        outline: none;
+        border: 1px solid #7EB101;
+        box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.15);
+    }
+}
+
+.modal-window__button {
+    margin-left: auto;
+    margin-right: auto;
+    width: 106px;
+    height: 40px;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: calc(20 / 13);
+    color: #2C2C2C;
+    background: #FFFFFF;
+    border: 2px solid #7EB101;
+    border-radius: 30px;
+
+    &:hover {
+        background: #BBF330;
+    }
+
+    &:active {
+        background: #FFE450;
+    }
+}
