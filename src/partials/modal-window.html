@@ -1,6 +1,6 @@
 <div class="modal-window-backdrop is-hidden">
     <div class="modal-window">
-        <button class="modal-window__close-button">
+        <button class="modal-window__close-button" type="button">
             <svg class="modal-window__close-icon">
                 <use href="./images/symbol-defs.svg#close-icon"></use>
             </svg>
@@ -9,17 +9,38 @@
         <form class="modal-window__form">
             <div class="modal-window__item">
                 <label class="modal-window__label" for="name">Name</label>
-                <input class="modal-window__input" id="name" name="name" type="text" placeholder="Your name">
+                <input class="modal-window__input" id="name" name="name" type="text" placeholder="Your name" required minlength="3">
+                <p class="modal-window__error-message">
+                    <svg class="modal-window__error-icon">
+                        <use href="./images/symbol-defs.svg#alert-icon"></use>
+                    </svg>
+                    <span class="modal-window__error-alert">The name must be between 3 and 25 characters</span>
+                    <span class="modal-window__error-required">This field is required</span>
+                </p>
             </div>
             <div class="modal-window__item">
                 <label class="modal-window__label" for="phone">Phone number</label>
-                <input class="modal-window__input" id="phone" name="phone" type="tel" placeholder="+38(0__)___ __ __">
+                <input class="modal-window__input" id="phone" name="phone" type="tel" placeholder="+38(0__)___ __ __" required pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}">
+                <p class="modal-window__error-message">
+                    <svg class="modal-window__error-icon">
+                        <use href="./images/symbol-defs.svg#alert-icon"></use>
+                    </svg>
+                    <span class="modal-window__error-alert">This phone must be in the format (044)111 11 11</span>
+                    <span class="modal-window__error-required">This field is required</span>
+                </p>
             </div>
             <div class="modal-window__item">
                 <label class="modal-window__label" for="email">E-mail</label>
-                <input class="modal-window__input" id="email" name="email" type="email" placeholder="example@gmail.com">
+                <input class="modal-window__input" id="email" name="email" type="email" placeholder="example@gmail.com" required>
+                <p class="modal-window__error-message">
+                    <svg class="modal-window__error-icon">
+                        <use href="./images/symbol-defs.svg#alert-icon"></use>
+                    </svg>
+                    <span class="modal-window__error-alert">Please enter a valid email address</span>
+                    <span class="modal-window__error-required">This field is required</span>
+                </p>
             </div>
-            <button class="modal-window__button">Send</button>
+            <button class="modal-window__button" type="submit">Send</button>
         </form>
     </div>
 </div>
