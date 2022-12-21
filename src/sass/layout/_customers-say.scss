@@ -1,5 +1,3 @@
-.section {
-}
 .reviews {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -9,18 +7,54 @@
   margin-left: auto;
   margin-right: auto;
 
-  background-image: url(../images/scnd-bg.png);
-  background-size: contain;
+  background-image: url(../images/reviews.png);
+  background-size: cover;
   background-repeat: no-repeat;
+  width: 100%;
+
+  @include retina {
+    .reviews {
+      background-image: url(../images/reviews-2x.png);
+    }
+  }
+
+  @include mobile {
+    max-width: 480px;
+    background-image: url(../images/reviews-480.png);
+    background-size: contain;
+
+    @include retina {
+      .reviews {
+        background-image: url(../images/reviews-480-2x.png);
+      }
+    }
+  }
 
   @include tablet {
     padding-bottom: 120px;
+    max-width: 768px;
+    background-image: url(../images/reviews-768.png);
+
+    @include retina {
+      .reviews {
+        background-image: url(../images/reviews-768-2x.png);
+      }
+    }
   }
 
   @include desktop {
     padding-top: 100px;
     padding-bottom: 100px;
     padding-left: 16px;
+
+    background-image: url(../images/reviews-1280.png);
+    max-width: 1280px;
+
+    @include retina {
+      .reviews {
+        background-image: url(../images/reviews-1280-2x.png);
+      }
+    }
   }
 }
 
