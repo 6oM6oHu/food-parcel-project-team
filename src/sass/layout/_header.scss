@@ -1,0 +1,137 @@
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6,
+// p {
+//   margin: 0px;
+// }
+
+// ul {
+//   margin: 0;
+//   padding: 0;
+//   list-style: none;
+// }
+
+a {
+  text-decoration-line: none;
+  color: inherit;
+}
+
+// img {
+//   display: block;
+// }
+
+.header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  background-color: #ffffff;
+  align-items: center;
+  padding: 10px 16px;
+}
+
+.header__nav {
+  @include tablet {
+    display: flex;
+    gap: 30px;
+  }
+}
+.header__list {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #2c2c2c;
+  @media screen and (max-width: 767px) {
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    height: 255px;
+    background: #fefefe;
+    box-shadow: 0px 4px 24px rgba(105, 105, 105, 0.1);
+    border-radius: 30px 0px 30px 30px;
+    overflow: hidden;
+  }
+  @include tablet {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+  }
+}
+
+.header__item {
+}
+
+.header__link {
+  display: flex;
+  height: 51px;
+  width: 130px;
+  align-items: center;
+  justify-content: center;
+  @include tablet {
+    height: 100%;
+    width: 100%;
+  }
+  &:hover {
+    background-color: #bbf330;
+    @include tablet {
+      background-color: #ffffff;
+      color: #bbf330;
+      text-decoration-line: underline;
+    }
+  }
+}
+
+.header__order-button {
+  display: none;
+  @include tablet {
+    display: block;
+    background: #bbf330;
+    border: none;
+    border-radius: 30px;
+    width: 98px;
+    height: 32px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.header__menu-button {
+  display: block;
+  background-color: transparent;
+  border: none;
+  @include tablet {
+    display: none;
+  }
+}
+
+.header__cross-button {
+  position: absolute;
+  top: 54px;
+  right: 14px;
+  z-index: 11;
+  display: block;
+  background-color: transparent;
+  border: none;
+}
+
+.is-hidden {
+  display: none;
+  @include tablet {
+    display: flex;
+  }
+}
+
+.header__cross-button.is-hidden {
+  display: none;
+}
